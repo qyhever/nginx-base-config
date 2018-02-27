@@ -1,0 +1,30 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+	<title>Document</title>
+</head>
+<body>
+	<div id="container">
+		<p>content内容content内容content内容content内容content内容</p>
+	</div>
+	<script src="../jquery-2.1.4.js"></script>
+	<script src="../layer/layer.js"></script>
+	<script>
+		layer.open({
+		  type: 1,
+		  title: ['标题', 'font-size: 20px'],
+		  content: $('#container'),
+		  btn: ['确定', '取消'],
+		  btnAlign: 'c',
+		  yes: function(index, elem) {
+		  	layer.close(index);
+		  	console.log('确定');
+		  	console.log(elem);
+		  }
+		});
+	</script>
+</body>
+</html>

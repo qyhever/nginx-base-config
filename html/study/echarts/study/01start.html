@@ -1,0 +1,40 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>开始</title>
+</head>
+<body>
+	<!-- 准备一个具备大小（宽高）的 DOM -->
+    <div id="main" style="width: 600px;height:400px;"></div>
+
+
+	<script src="../echarts-master/dist/echarts.js"></script>
+	<script>
+		var myChart = echarts.init(document.getElementById('main'));
+
+		// 指定图表的配置项和数据
+        var option = {
+            title: {
+                text: '标题'
+            },
+            tooltip: {},
+            legend: {
+                data:['星期']
+            },
+            xAxis: {
+                data: ["星期一","星期二","星期三","星期四","星期五","星期六"]
+            },
+            yAxis: {},
+            series: [{
+                name: '星期',
+                type: 'bar',
+                data: [15, 10, 16, 30, 10, 20]
+            }]
+        };
+
+        // 使用刚指定的配置项和数据显示图表。
+        myChart.setOption(option);
+	</script>
+</body>
+</html>

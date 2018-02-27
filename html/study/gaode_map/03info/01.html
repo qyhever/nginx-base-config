@@ -1,0 +1,54 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="chrome=1">
+    <meta name="viewport" content="initial-scale=1.0, user-scalable=no, width=device-width">
+    <style type="text/css">
+        body,
+        html,
+        #container {
+            width: 100%;
+            height: 100%;
+            margin: 0px
+        }
+    </style>
+    <title>快速入门</title>
+
+</head>
+<body>
+    <div id="container" tabindex="0"></div>
+    <script type="text/javascript" src="http://webapi.amap.com/maps?v=1.4.2&key=6a169cffad64fb2322801c076ae7d3ec"></script>
+    <script type="text/javascript">
+        var map = new AMap.Map('container', {
+            resizeEnable: true,
+            zoom: 11,
+            // layers: [new AMap.TileLayer.RoadNet(),
+            // new AMap.TileLayer.Satellite()],
+            center: [116.39, 39.9]
+        });
+
+        // 绘制坐标
+        var marker = new AMap.Marker({
+            position: [116.380983, 39.989628]
+        });
+        marker.setMap(map);
+
+        // 绘制圆形遮罩
+        var circle = new AMap.Circle({
+            radius: 5000,
+            center: map.getCenter(),
+            strokeColor: 'rgba(0,0,255,.1)',
+            strokeWeight: 1,
+            fillColor: 'rgba(0,0,255,.3)',
+            fillOpacity: 0.9,
+            map: map
+
+        })
+        map.setCenter(marker.getPosition())
+        // map.addControl(new AMap.ToolBar())
+        map.setFitView()
+    </script>
+    <!-- <script type="text/javascript" src="https://webapi.amap.com/demos/js/liteToolbar.js"></script> -->
+</body>
+</html>

@@ -1,0 +1,40 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Document</title>
+</head>
+
+<body>
+    <h1>标题</h1>
+    <script src="../jquery-2.1.4.js"></script>
+    <script src="../layer/layer.js"></script>
+    <script>
+    /*layer.prompt({
+        formType: 1, //输入框类型，支持0（文本）默认,1（密码）,2（多行文本）
+        title: '标题',
+        value: '输入内容', //初始时的值，默认空字符
+        maxlength: 5, //可输入文本的最大长度，默认500
+    });*/
+
+    var index = layer.prompt({
+        formType: 2,
+        title: '标题',
+        value: '输入内容',
+        btnAlign: 'c',
+        area: ['800px', '350px'] //自定义文本域宽高
+    },function(value, index, elem) {
+        console.log('输入的内容为：' + value);
+        layer.close(index);
+    });
+    // layer.style(index, {
+    //   width: '500px',
+    //   top: '10px'
+    // });
+    </script>
+</body>
+
+</html>

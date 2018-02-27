@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link rel="stylesheet" href="../css/zTreeStyle/zTreeStyle.css">
+</head>
+<body>
+    <div>
+        <ul id="treeDemo" class="ztree"></ul>
+        <button id="btn">确定</button>
+    </div>
+</body>
+<script src="../js/jquery-1.4.4.min.js"></script>
+<script src="../js/jquery.ztree.all.js"></script>
+<script>
+    var zTreeObj;  
+  	var zNodes;
+    var setting = {
+        check: {
+            enable: true,
+            chkStyle: "checkbox"
+        },
+        data: {
+            key: {
+                name: "menuName"
+            },
+            simpleData: {
+                enable: true,
+                idKey: "menuId",
+                pIdKey: "superiorId"
+            }
+        },
+        view: {
+            autoCancelSelected: false,
+            fontCss: {
+                color: "#656565",
+                fontSize: "12px"
+            }
+        }
+    };
+    $(function(){
+        $.ajax({
+            url: './data/data.json',
+            success: function(data){
+                zNodes = data;
+                for (var i = 0; i < zNodes.length; i++) {
+                    zNodes[i].checked = true;
+                };
+                zTreeObj = $.fn.zTree.init($("#treeDemo"), setting, zNodes);
+            }
+        })
+        $('#btn').bind('click',function(){
+            var nodes = zTreeObj.getCheckedNodes();
+            console.log(nodes)
+        })
+    })
+    
+</script>
+</html>

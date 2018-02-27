@@ -1,0 +1,50 @@
+<!doctype html>
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="chrome=1">
+    <meta name="viewport" content="initial-scale=1.0, user-scalable=no, width=device-width">
+    <style type="text/css">
+        body,
+        html,
+        #map_box {
+            width: 100%;
+            height: 100%;
+        }
+    </style>
+    <title>document</title>
+</head>
+<body>
+    <div id="map_box" tabindex="0"></div>
+    <script type="text/javascript" src="http://webapi.amap.com/maps?v=1.4.2&key=6a169cffad64fb2322801c076ae7d3ec"></script>
+    <script type="text/javascript">
+        var map = new AMap.Map('map_box', {
+            resizeEnable: true,
+            zoom: 10,
+            center: [114.33402, 30.577099], //new AMap.LngLat(116.39,39.9)
+        });
+        var lnglats = [//也可以使用LngLat对象
+            [116.368904, 39.923423], [116.382122, 39.921176],
+            [116.387271, 39.922501], [116.398258, 39.914600]
+        ];
+        var infoWindow = new AMap.InfoWindow({
+            offset: new AMap.Pixel(0, -30)
+        });
+        for (var i = 0, marker; i < lnglats.length; i++) {
+            marker = new AMap.Marker({
+                position: lnglats[i],
+                map: map
+            });
+            marker.content = '我是第' + i + '个信息窗体的内容';
+            //给Marker绑定单击事件
+            marker.on('click', markerClick);
+        }
+        map.setFitView();
+
+        function markerClick(e){
+            console.log(e.target)
+            infoWindow.setContent(e.target.content);
+            infoWindow.open(map, e.target.getPosition());
+        }
+    </script>
+</body>
+</html>

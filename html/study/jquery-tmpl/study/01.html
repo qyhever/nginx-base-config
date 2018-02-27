@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <div id="booklist"></div>
+
+    <!-- type="text/html" -->
+    <script type="text/x-jquery-tmpl" id="myTmpl">
+        // <h1>默认'${$value}'---'${$index}'</h1>
+        <h2>${title}</h2>
+        <!-- <ul>
+            {{each list}}
+                <li>${$value.name}----------${$index}</li>
+            {{/each}}
+        </ul> -->
+        
+
+        // <h1>自定义迭代变量</h1>
+        // {{each (index,value) list}}
+        //     <li>{value.name}---{index}</li>
+        // {{/each}}
+    </script>
+</body>
+<script src="../jquery-tmpl-master/jquery-2.1.4.js"></script>
+<script src="../jquery-tmpl-master/jquery.tmpl.js"></script>
+<script>
+    var info = {
+        title: '四大名著',
+        list: [
+            {name: '西游记'},
+            {name: '水浒传'},
+            {name: '三国演义'},
+            {name: '红楼梦'}
+        ]
+    };
+        
+    $("#myTmpl").tmpl(info).appendTo("#booklist");
+    // var template = $('#myTmpl').tmpl(info.list);
+
+    // $('#booklist').html(template);
+    // $('#booklist').append(template);
+
+    // $.template("template", 'myTmpl');
+    // $.tmpl("template", info).appendTo("#booklist");
+</script>
+</html>

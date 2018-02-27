@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link rel="stylesheet" href="../../layui/css/layui.css" media="all">
+</head>
+<body>
+    <div class="layui-tab" lay-filter="demo">
+        <ul class="layui-tab-title">
+            <li class="layui-this">网站设置</li>
+            <li>商品管理</li>
+            <li>订单管理</li>
+        </ul>
+        <div class="layui-tab-content">
+            <div class="layui-tab-item layui-show">内容1</div>
+            <div class="layui-tab-item">内容2</div>
+            <div class="layui-tab-item">内容3</div>
+        </div>
+    </div>
+</body>
+<script src="../../jquery-2.1.4.js"></script>
+<script src="../../layui/layui.js"></script>
+<script>
+    layui.use('element', function () {
+        var element = layui.element;
+
+        //一些事件监听
+        element.on('tab(demo)', function (data) {
+            console.log(data);
+        });
+    });
+</script>
+</html>

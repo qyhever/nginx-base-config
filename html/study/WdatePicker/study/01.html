@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <input type="text" class="Wdate">
+    <button class="btn">确认</button>
+</body>
+<script src="../WdatePicker.js"></script>
+<script>
+    document.querySelector('.Wdate').onfocus = function(){
+        WdatePicker({
+            skin:'whyGreen', // 主题颜色
+            // minDate: '2006-09-10', // 限制日期的范围
+            // maxDate: '2008-12-20',
+            minDate: '%y-%M-01', maxDate: '%y-%M-%ld', // 只能选择本月的日期1号至本月最后一天
+            // specialDays: [1,5],
+            // specialDates: ['-01','-15']
+        })
+    }
+
+    document.querySelector('.btn').addEventListener('click',function(){
+        console.log(document.querySelector('.Wdate').value)
+    })
+</script>
+</html>

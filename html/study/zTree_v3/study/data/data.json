@@ -1,0 +1,133 @@
+[
+    {
+        "checked": "true",
+        "icon": "http://localhost:8080/JavaScript/zTree_v3/css/zTreeStyle/img/diy/1_open.png",
+        "iconClose": "http://localhost:8080/JavaScript/zTree_v3/css/zTreeStyle/img/diy/1_close.png",
+        "iconOpen": "http://localhost:8080/JavaScript/zTree_v3/css/zTreeStyle/img/diy/1_open.png",
+        "menuId": 1,
+        "menuName": "我的工作台",
+        "superiorId": "ROOT"
+    },
+    {
+        "icon": "http://localhost:8080/JavaScript/zTree_v3/css/zTreeStyle/img/diy/1_open.png",
+        "iconClose": "http://localhost:8080/JavaScript/zTree_v3/css/zTreeStyle/img/diy/1_close.png",
+        "iconOpen": "http://localhost:8080/JavaScript/zTree_v3/css/zTreeStyle/img/diy/1_open.png",
+        "menuId": 5,
+        "menuName": "订单管理",
+        "superiorId": "ROOT"
+    },
+    {
+        "icon": "http://localhost:8080/JavaScript/zTree_v3/css/zTreeStyle/img/diy/1_open.png",
+        "iconClose": "http://localhost:8080/JavaScript/zTree_v3/css/zTreeStyle/img/diy/1_close.png",
+        "iconOpen": "http://localhost:8080/JavaScript/zTree_v3/css/zTreeStyle/img/diy/1_open.png",
+        "menuId": 6,
+        "menuName": "客户管理",
+        "superiorId": "ROOT"
+    },
+    {
+        "icon": "http://localhost:8080/JavaScript/zTree_v3/css/zTreeStyle/img/diy/1_open.png",
+        "iconClose": "http://localhost:8080/JavaScript/zTree_v3/css/zTreeStyle/img/diy/1_close.png",
+        "iconOpen": "http://localhost:8080/JavaScript/zTree_v3/css/zTreeStyle/img/diy/1_open.png",
+        "menuId": 8,
+        "menuName": "系统设置",
+        "superiorId": "ROOT"
+    },
+    {
+        "icon": "http://localhost:8080/JavaScript/zTree_v3/css/zTreeStyle/img/diy/2.png",
+        "menuId": 11,
+        "menuName": "订单管理",
+        "superiorId": "5"
+    },
+    {
+        "icon": "http://localhost:8080/JavaScript/zTree_v3/css/zTreeStyle/img/diy/2.png",
+        "menuId": 13,
+        "menuName": "客户管理",
+        "superiorId": "6"
+    },
+    {
+        "icon": "http://localhost:8080/JavaScript/zTree_v3/css/zTreeStyle/img/diy/2.png",
+        "menuId": 14,
+        "menuName": "用户管理",
+        "superiorId": "8"
+    },
+    {
+        "icon": "http://localhost:8080/JavaScript/zTree_v3/css/zTreeStyle/img/diy/1_open.png",
+        "iconClose": "http://localhost:8080/JavaScript/zTree_v3/css/zTreeStyle/img/diy/1_close.png",
+        "iconOpen": "http://localhost:8080/JavaScript/zTree_v3/css/zTreeStyle/img/diy/1_open.png",
+        "menuId": 3,
+        "menuName": "车辆管理",
+        "superiorId": "ROOT"
+    },
+    {
+        "icon": "http://localhost:8080/JavaScript/zTree_v3/css/zTreeStyle/img/diy/2.png",
+        "menuId": 15,
+        "menuName": "车辆管理",
+        "superiorId": "3"
+    },
+    {
+        "icon": "http://localhost:8080/JavaScript/zTree_v3/css/zTreeStyle/img/diy/2.png",
+        "menuId": 16,
+        "menuName": "客户审核",
+        "superiorId": "6"
+    },
+    {
+        "icon": "http://localhost:8080/JavaScript/zTree_v3/css/zTreeStyle/img/diy/2.png",
+        "menuId": 17,
+        "menuName": "电站管理",
+        "superiorId": "4"
+    },
+    {
+        "icon": "http://localhost:8080/JavaScript/zTree_v3/css/zTreeStyle/img/diy/1_open.png",
+        "iconClose": "http://localhost:8080/JavaScript/zTree_v3/css/zTreeStyle/img/diy/1_close.png",
+        "iconOpen": "http://localhost:8080/JavaScript/zTree_v3/css/zTreeStyle/img/diy/1_open.png",
+        "menuId": 4,
+        "menuName": "电站管理",
+        "superiorId": "ROOT"
+    },
+    {
+        "icon": "http://localhost:8080/JavaScript/zTree_v3/css/zTreeStyle/img/diy/2.png",
+        "menuId": 18,
+        "menuName": "电站商户管理",
+        "superiorId": "4"
+    },
+    {
+        "icon": "http://localhost:8080/JavaScript/zTree_v3/css/zTreeStyle/img/diy/1_open.png",
+        "iconClose": "http://localhost:8080/JavaScript/zTree_v3/css/zTreeStyle/img/diy/1_close.png",
+        "iconOpen": "http://localhost:8080/JavaScript/zTree_v3/css/zTreeStyle/img/diy/1_open.png",
+        "menuId": 2,
+        "menuName": "地图监控",
+        "superiorId": "ROOT"
+    },
+    {
+        "icon": "http://localhost:8080/JavaScript/zTree_v3/css/zTreeStyle/img/diy/1_open.png",
+        "iconClose": "http://localhost:8080/JavaScript/zTree_v3/css/zTreeStyle/img/diy/1_close.png",
+        "iconOpen": "http://localhost:8080/JavaScript/zTree_v3/css/zTreeStyle/img/diy/1_open.png",
+        "menuId": 7,
+        "menuName": "预警设置",
+        "superiorId": "ROOT"
+    },
+    {
+        "icon": "http://localhost:8080/JavaScript/zTree_v3/css/zTreeStyle/img/diy/2.png",
+        "menuId": 19,
+        "menuName": "车辆预警",
+        "superiorId": "7"
+    },
+    {
+        "icon": "http://localhost:8080/JavaScript/zTree_v3/css/zTreeStyle/img/diy/2.png",
+        "menuId": 20,
+        "menuName": "充电预警",
+        "superiorId": "7"
+    },
+    {
+        "icon": "http://localhost:8080/JavaScript/zTree_v3/css/zTreeStyle/img/diy/2.png",
+        "menuId": 21,
+        "menuName": "停车预警",
+        "superiorId": "7"
+    },
+    {
+        "icon": "http://localhost:8080/JavaScript/zTree_v3/css/zTreeStyle/img/diy/2.png",
+        "menuId": 22,
+        "menuName": "角色管理",
+        "superiorId": "8"
+    }
+]

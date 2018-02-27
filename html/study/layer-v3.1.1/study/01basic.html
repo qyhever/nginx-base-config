@@ -1,0 +1,71 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        /*skin皮肤自定义*/
+        body .demo-class .layui-layer-title{background:#c00; color:#fff; border: none;}
+        body .demo-class .layui-layer-btn{border-top:1px solid #E9E7E7}
+        body .demo-class .layui-layer-btn a{background:#333;}
+        body .demo-class .layui-layer-btn .layui-layer-btn1{background:#999;}
+    </style>
+</head>
+
+<body>
+    
+    <div class="container">
+        DOM结构
+    </div>
+
+    <script src="../jquery-2.1.4.js"></script>
+    <script src="../layer/layer.js"></script>
+</body>
+<script>
+    // basic
+    layer.open({
+        title: ['title标题', 'font-size: 20px'],
+        content: 'content内容',
+        btn: ['确定', '取消'],
+        btnAlign: 'c',
+        yes: function(index, layero) {
+            layer.close(index);
+            console.log('确定');
+        }
+    });
+
+    
+	/*layer.open({
+        // type: 1, // 默认0(信息框，有按钮)，1(页面层，没有按钮)
+        // title: 'title标题',
+	    title: ['title标题', 'font-size: 20px'], // 数组形式
+        content: 'content内容',
+	    // content: $('.container'), // DOM容器，type应该为1
+        // skin: 'layui-layer-lan', // 皮肤，可选还有(layui-layer-molv)，也可自定义类名
+        // area: 'auto', // 默认auto自适应，可传['500px', '300px']
+        // offset: 'auto', // 默认垂直水平居中
+        btn: ['确定', '取消'],
+        btnAlign: 'c', // 默认'r'，右对齐
+        yes: function(index, layero) {
+            // layer.close(index);
+            console.log('确定');
+        },
+        btn2: function(index, layero) {
+            console.log('取消');
+        },
+        closeBtn: 1, // 关闭按钮风格,默认1
+        cancel: function() {
+            console.log('X');
+        },
+        shade: [0.8, '#393D49'], // 遮罩颜色，默认[0.3, '#000']
+        // shadeClose: true, // 点击遮罩是否关闭，默认false
+        // time: 3000, // 弹窗自动关闭时间，默认不自动关闭
+        // anim: 0, // 弹出动画，默认0
+        // isOutAnim: true, // 关闭动画，默认true
+	});*/
+</script>
+
+</html>
